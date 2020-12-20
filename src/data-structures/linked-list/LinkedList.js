@@ -27,6 +27,30 @@ class LinkedList {
 
         return this
     }
+
+    /**
+     * Adds values to the end of the list
+     * @param {*} value
+     * @return entire LinkedList
+     */
+    append (value) {
+        // Create a new node
+        const newNode = new LinkedList(value)
+
+        // If no head exists, newNode will become the head
+        if (!this.head) {
+            this.head = newNode
+            this.tail = newNode
+
+            return this
+        }
+
+        // Adding newNode to the end  of the list
+        this.tail.next = newNode
+        this.tail = newNode
+
+        return this
+    }
 }
 
 export default LinkedList
