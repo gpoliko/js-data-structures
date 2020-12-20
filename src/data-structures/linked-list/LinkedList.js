@@ -1,23 +1,19 @@
 import LinkedListNode from './linkedListNode'
 
+/** Class respresenting a LinkedList */
 class LinkedList {
 
-    // Constructor to create a LinkedList data structure
+    /** Creates a LinkedList */
     constructor () {
-        /** @var LinkedList Node */
         this.head = null
-
-        /** @var LinkedList Node */
         this.tail = null
-
-        /** @var LinkedList length */
         this.size = 0
     }
 
     /**
-     * 
+     * Adds values to the front of the list
      * @param {*} value 
-     * @return {LinkedList}
+     * @return entire LinkedList
      */
     prepend (value) {
         // Create a new node to become a head

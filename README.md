@@ -1,5 +1,5 @@
 # JavaScript Data Structures and Algorithms
-My aim is to implement popular data structures and algorithms using the JavaScript programming language. I am on a never-ending learning journey and essentially "sharping the saw". I will also endeavor to provide documentation for each data structure and algorithm.
+My aim is to implement popular data structures and algorithms using the JavaScript programming language. I am on a never-ending learning journey and essentially "sharping the saw". I will also endeavor to provide documentation for each data structure and algorithm, as well as practicing the use of JSDoc.
 
 **DISCLAIMER:**
 > This repo is being used as a means for learning and research. It does **not** intend to provide a formal explanation or implementation of data structures and algorithms, and it should **not** be used as such.
