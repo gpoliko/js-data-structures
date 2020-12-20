@@ -24,7 +24,6 @@ describe('Linked List Node', () => {
     it('should allow a node\'s data to be an object', () => {
         const n2Data = { d1: 'test1', d2: 'test2'}
         const n2 = new LinkedListNode(n2Data)
-        const n1 = new LinkedListNode(5)
 
         expect(n2.data.d1).toBe('test1')
         expect(n2.data.d2).toBe('test2')
