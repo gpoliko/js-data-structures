@@ -2,8 +2,7 @@ import LinkedListNode from './linkedListNode'
 
 /** Class respresenting a LinkedList */
 class LinkedList {
-
-    /** Creates a LinkedList */
+    /** Creates a LinkedList object*/
     constructor () {
         this.head = null
         this.tail = null
@@ -12,7 +11,7 @@ class LinkedList {
 
     /**
      * Adds values to the front of the list
-     * @param {*} value 
+     * @param {Object} value 
      * @return entire LinkedList
      */
     prepend (value) {
@@ -30,7 +29,7 @@ class LinkedList {
 
     /**
      * Adds values to the end of the list
-     * @param {*} value
+     * @param {Object} value
      * @return entire LinkedList
      */
     append (value) {
