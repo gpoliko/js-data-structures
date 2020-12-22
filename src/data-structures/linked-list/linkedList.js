@@ -9,6 +9,26 @@ class LinkedList {
         this.size = 0
     }
 
+    toString (callback) {
+        // console.log("THIS =", this)
+        return this.convertToArray(node => node.toString(callback)).toString()
+    }
+
+    /**
+     * convertToArray - creates an array of nodes
+     * @return array of nodes
+     */
+    convertToArray () {
+        const nodes = []
+        let currentNode = this.head
+
+        while (currentNode) {
+            nodes.push(currentNode)
+            currentNode = currentNode.next
+        }
+        return nodes
+    }
+
     /**
      * Adds values to the front of the list
      * @param {Object} value 
