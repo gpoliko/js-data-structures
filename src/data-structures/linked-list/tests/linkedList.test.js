@@ -28,7 +28,6 @@ describe('Linked List Tests', () => {
 
     newList.add('test2')
     newList.addFirst('test3')
-    
-
+    expect(newList.toString()).toBe('test3,test1,test2')
   })
 })
