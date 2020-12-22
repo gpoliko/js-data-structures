@@ -54,7 +54,7 @@ class LinkedList {
      */
     append (value) {
         // Create a new node
-        const newNode = new LinkedList(value)
+        const newNode = new LinkedListNode(value)
 
         // If no head exists, newNode will become the head
         if (!this.head) {

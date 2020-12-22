@@ -7,4 +7,11 @@ describe('Linked List Tests', () => {
         expect(newList).toEqual({head: null, size: 0, tail: null})
         expect(newList.toString()).toBe('')
     })
+
+    it('should add a new node to the linked list', () => {
+        const newList = new LinkedList()
+
+        newList.append('testing-123')
+        expect(newList.toString()).toBe('testing-123')
+    })
 })
