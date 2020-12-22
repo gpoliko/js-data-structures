@@ -13,5 +13,7 @@ describe('Linked List Tests', () => {
 
     newList.append('testing-123')
     expect(newList.toString()).toBe('testing-123')
+    expect(newList.head).toEqual({data: 'testing-123', next: null})
+    expect(newList.tail.next).toBeNull()
   })
 })
