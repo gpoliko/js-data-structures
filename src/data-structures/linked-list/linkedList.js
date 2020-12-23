@@ -77,13 +77,34 @@ class LinkedList {
     let count = 0
     let node = this.head
 
-    // Iterate through each node in the linked list
+    // Iterate through the linked list nodes
     // Increase counter for every node found in the linked list
     while (node) {
       count++
       node = node.next
     }
     return count
+  }
+
+  /**
+   * get - returns node given index
+   * @param {int} index 
+   * @return node at the given index of the linked list
+   */
+  get (index) {
+    let counter = 0
+    let node = this.head
+
+    // Iterate through the linked list nodes to find the node to return
+    while (node) {
+      if (counter === index) {
+        return node
+      }
+
+      counter++
+      node = node.next
+    }
+    return null
   }
 
   /**
