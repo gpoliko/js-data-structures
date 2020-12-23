@@ -38,5 +38,8 @@ describe('Linked List Tests', () => {
     newList.add('2')
     newList.add('three')
     expect(newList.size()).toBe(3)
+    expect(newList.head.toString()).toBe('1')
+    expect(newList.tail.toString()).toBe('three')
+    expect(newList.toString()).toBe('1,2,three')
   })
 })

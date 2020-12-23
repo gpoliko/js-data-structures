@@ -69,9 +69,16 @@ class LinkedList {
       return this
   }
 
+  /**
+    * size - returns the number of nodes in the linked list
+    * @return number of nodes in the linked list
+    */
   size () {
     let count = 0
     let node = this.head
+
+    // Iterate through each node in the linked list
+    // Increase counter for every node found in the linked list
     while (node) {
       count++
       node = node.next
