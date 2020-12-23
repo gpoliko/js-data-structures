@@ -50,23 +50,23 @@ class LinkedList {
     this.tail = newNode
     return this
   }
-  
+
   /**
    * addFirst - adds nodes to the front of the linked list
    * @param {Object} data
    * @return entire LinkedList
    */
   addFirst (data) {
-      // Create a new node to become a head
-      const newNode = new LinkedListNode(data, this.head)
-      this.head = newNode
-      
-      // If no tail exists, newNode will become the tail
-      if (!this.tail) {
-          this.tail = newNode
-      }
-      
-      return this
+    // Create a new node to become a head
+    const newNode = new LinkedListNode(data, this.head)
+    this.head = newNode
+
+    // If no tail exists, newNode will become the tail
+    if (!this.tail) {
+      this.tail = newNode
+    }
+
+    return this
   }
 
   /**
@@ -87,13 +87,12 @@ class LinkedList {
   }
 
   /**
-    * getFirst returns the first node in the linked list
+    * getFirst - returns the first node in the linked list
     * @return first node in the linked list
     */
   getFirst () {
     return this.head
   }
 }
-
 
 export default LinkedList

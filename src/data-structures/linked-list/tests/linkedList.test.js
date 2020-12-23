@@ -13,16 +13,16 @@ describe('Linked List Tests', () => {
 
     newList.add('testing-123')
     expect(newList.toString()).toBe('testing-123')
-    expect(newList.head).toEqual({data: 'testing-123', next: null})
+    expect(newList.head).toEqual({ data: 'testing-123', next: null })
     expect(newList.tail.next).toBeNull()
   })
 
   it('should add a node to the beginning of the linked list', () => {
     const newList = new LinkedList()
-    
+
     newList.addFirst('test1')
-    expect(newList.head).toEqual({data: 'test1', next: null})
-    expect(newList.tail).toEqual({data: 'test1', next: null})
+    expect(newList.head).toEqual({ data: 'test1', next: null })
+    expect(newList.tail).toEqual({ data: 'test1', next: null })
     expect(newList.head.toString()).toBe('test1')
     expect(newList.tail.toString()).toBe('test1')
 
@@ -30,10 +30,10 @@ describe('Linked List Tests', () => {
     newList.addFirst('test3')
     expect(newList.toString()).toBe('test3,test1,test2')
   })
-  
+
   it('should return the size of the linked list', () => {
     const newList = new LinkedList()
-    
+
     newList.add(1)
     newList.add('2')
     newList.add('three')
