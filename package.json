@@ -4,7 +4,7 @@
   "description": "My personal learning resource. Data structures and algorithms implementation using the JavaScript programming language.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll --verbose",
+    "test": "jest --verbose",
     "coverage": "npm run test -- --coverage",
     "lint": "eslint src"
   },
