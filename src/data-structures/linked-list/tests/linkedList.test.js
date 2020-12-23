@@ -42,4 +42,13 @@ describe('Linked List Tests', () => {
     expect(newList.tail.toString()).toBe('three')
     expect(newList.toString()).toBe('1,2,three')
   })
+
+  it('should return the first node of the linked list', () => {
+    const newList = new LinkedList()
+
+    newList.add(1)
+    newList.add('2')
+    newList.add('three')
+    expect(newList.getFirst().toString()).toBe('1')
+  })
 })

@@ -85,6 +85,14 @@ class LinkedList {
     }
     return count
   }
+
+  /**
+    * getFirst returns the first node in the linked list
+    * @return first node in the linked list
+    */
+  getFirst () {
+    return this.head
+  }
 }
 
 
