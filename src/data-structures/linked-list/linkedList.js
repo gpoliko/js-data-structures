@@ -88,7 +88,7 @@ class LinkedList {
 
   /**
    * get - returns node given index
-   * @param {int} index 
+   * @param {int} index
    * @return node at the given index of the linked list
    */
   get (index) {

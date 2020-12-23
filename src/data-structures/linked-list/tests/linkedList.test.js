@@ -14,7 +14,7 @@ describe('Linked List Tests', () => {
     newList.add('testing-123')
     expect(newList.toString()).toBe('testing-123')
     expect(newList.head).toEqual({ data: 'testing-123', next: null })
-    expect(newList.tail.next).toBe(null)
+    expect(newList.tail.next).toBeNull()
   })
 
   it('should add a node to the beginning of the linked list', () => {
@@ -53,8 +53,8 @@ describe('Linked List Tests', () => {
     expect(newList.get(0).data).toBe(1)
     expect(newList.get(2).data).toBe('two also')
     expect(newList.toString()).toBe('1,2,two also')
-    expect(newList.tail.next).toBe(null)
-    expect(newList.get(3)).toBe(null)
+    expect(newList.tail.next).toBeNull()
+    expect(newList.get(3)).toBeNull()
   })
 
   it('should return the first node of the linked list', () => {
