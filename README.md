@@ -1,5 +1,5 @@
 # JavaScript Data Structures, Algorithms and Design Patterns
-My aim is to implement popular data structures, algorithms and design patterns using the JavaScript programming language. I am on a never-ending learning journey and essentially "sharping the saw". I will also endeavor to provide documentation for each data structure and algorithm, implement tests and practice using JSDoc.
+My aim is to implement popular data structures, algorithms and design patterns using the JavaScript programming language. I am on a never-ending learning journey and essentially "sharping the saw". I will also endeavor to provide documentation for each data structure, algorithm and design pattern, implement tests and practice using JSDoc.
 
 **DISCLAIMER:**
 > This repo is being used as a means for learning and research. It does **not** intend to provide a formal explanation or implementation of data structures and algorithms, and it should **not** be used as such.
