@@ -6,9 +6,9 @@ class LinkedList {
   constructor () {
     this.head = null
     this.tail = null
-    this.size = 0
   }
 
+  // Override default toString() method
   toString (callback) {
     // console.log("THIS =", this)
     return this.toArray(node => node.toString(callback)).toString()
@@ -30,7 +30,7 @@ class LinkedList {
   }
 
   /**
-     * Adds values to the end of the list
+     * add - Adds nodes to the end of the linked list
      * @param {Object} data
      * @return entire LinkedList
      */
@@ -42,19 +42,17 @@ class LinkedList {
     if (!this.head) {
       this.head = newNode
       this.tail = newNode
-
       return this
     }
 
-    // Adding newNode to the end  of the list
+    // Adding newNode to the end of the linked list
     this.tail.next = newNode
     this.tail = newNode
-
     return this
   }
   
   /**
-   * Adds values to the front of the list
+   * addFirst - adds nodes to the front of the linked list
    * @param {Object} data
    * @return entire LinkedList
    */
@@ -66,9 +64,19 @@ class LinkedList {
       // If no tail exists, newNode will become the tail
       if (!this.tail) {
           this.tail = newNode
-        }
-        
-        return this
+      }
+      
+      return this
+  }
+
+  size () {
+    let count = 0
+    let node = this.head
+    while (node) {
+      count++
+      node = node.next
+    }
+    return count
   }
 }
 
