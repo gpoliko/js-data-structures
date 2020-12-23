@@ -50,5 +50,6 @@ describe('Linked List Tests', () => {
     newList.add('2')
     newList.add('three')
     expect(newList.getFirst().toString()).toBe('1')
+    expect(newList.getFirst().data).toBe(1)
   })
 })
