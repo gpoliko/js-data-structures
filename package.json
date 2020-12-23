@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --verbose",
+    "coverage": "npm run test -- --coverage",
     "lint": "eslint src"
   },
   "repository": {
