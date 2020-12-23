@@ -1,4 +1,4 @@
-# JavaScript Data Structures and Algorithms
+# JavaScript Data Structures, Algorithms and Design Patterns
 My aim is to implement popular data structures, algorithms and design patterns using the JavaScript programming language. I am on a never-ending learning journey and essentially "sharping the saw". I will also endeavor to provide documentation for each data structure and algorithm, implement tests and practice using JSDoc.
 
 **DISCLAIMER:**
