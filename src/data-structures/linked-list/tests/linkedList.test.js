@@ -54,6 +54,7 @@ describe('Linked List Tests', () => {
     expect(newList.get(2).data).toBe('two also')
     expect(newList.toString()).toBe('1,2,two also')
     expect(newList.tail.next).toBe(null)
+    expect(newList.get(3)).toBe(null)
   })
 
   it('should return the first node of the linked list', () => {
