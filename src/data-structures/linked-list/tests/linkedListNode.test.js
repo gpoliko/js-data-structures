@@ -50,10 +50,20 @@ describe('Linked List Node', () => {
   })
 
   it('should return unchange node data format with our defined stringifier', () => {
-    const nodeData = { d1: 1, d2: 2 }
-    const node = new LinkedListNode(nodeData)
-    const nonCallBackResult = node.toString()
+    const objData = { d1: 1, d2: 2 }
+    const strData = '5'
+    const intData = 5
 
-    expect(nonCallBackResult).toBe('[object Object]')
+    const objNode = new LinkedListNode(objData)
+    const strNode = new LinkedListNode(strData)
+    const intNode = new LinkedListNode(intData)
+
+    const test1 = objNode.toString()
+    const test2 = strNode.toString()
+    const test3 = intNode.toString()
+
+    expect(test1).toBe('[object Object]')
+    expect(test2).toBe('5')
+    expect(test3).toBe('5')
   })
 })
