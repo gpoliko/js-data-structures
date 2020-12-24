@@ -41,10 +41,19 @@ describe('Linked List Node', () => {
   })
 
   it('should convert a node to string with our defined stringifier', () => {
-    const nodeData = { d1: 1, d2: 'test' }
+    const nodeData = { d1: 1, d2: 2 }
     const node = new LinkedListNode(nodeData)
-    const toStringCallback = (data) => `d1: ${data.d1}, d2: ${data.d2}`
+    const callBackTrue = data => `d1: ${data.d1}, d2: ${data.d2}`
+    const callBackResult = node.toString(callBackTrue)
 
-    expect(node.toString(toStringCallback)).toBe('d1: 1, d2: test')
+    expect(callBackResult).toBe('d1: 1, d2: 2')
+  })
+
+  it('should return unchange node data format with our defined stringifier', () => {
+    const nodeData = { d1: 1, d2: 2 }
+    const node = new LinkedListNode(nodeData)
+    const nonCallBackResult = node.toString()
+
+    expect(nonCallBackResult).toBe('[object Object]')
   })
 })
