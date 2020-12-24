@@ -48,12 +48,12 @@ describe('Linked List Node', () => {
 
     expect(callBackResult).toBe('d1: 1, d2: 2')
   })
-  
+
   it('should return unchange node data format with our defined stringifier', () => {
     const nodeData = { d1: 1, d2: 2 }
     const node = new LinkedListNode(nodeData)
     const nonCallBackResult = node.toString()
 
-    expect(nonCallBackResult).toBe("[object Object]")
+    expect(nonCallBackResult).toBe('[object Object]')
   })
 })
