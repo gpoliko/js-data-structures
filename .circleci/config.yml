@@ -33,7 +33,7 @@ orbs:
   node: circleci/node@4.1.0
 version: 2.1
 workflows:
-  run-tests:
+  test-and-build:
     jobs:
       - build-container
       - run-tests:
