@@ -1,14 +1,25 @@
 jobs:
-  test-and-build:
+  build-container:
+    working_directory: ~/circleci-js-data-structures
     docker:
-      - image: circleci/node:14.15.2
+      - image: "circleci/node:14.15.2"
     steps:
       - checkout
-      - restore_cache:
-          key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install dependencies
           command: npm install
+      -run: node --version
+  run-tests:
+    working_directory: ~/circleci-js-data-structures
+    docker:
+      - image: "circleci/node:14.15.2"
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
       - save_cache:
           key: v1-dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -25,4 +36,7 @@ version: 2.1
 workflows:
   run-tests:
     jobs:
-      - test-and-build
+      - build-container
+      - run-tests:
+          requires:
+            - build
