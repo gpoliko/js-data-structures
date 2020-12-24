@@ -9,6 +9,10 @@
     "ci": "npm run lint && npm run coverage",
     "lint": "eslint src/"
   },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gpoliko/data-structures-and-algorithms.git"
