@@ -44,8 +44,16 @@ describe('Linked List Node', () => {
     const nodeData = { d1: 1, d2: 2 }
     const node = new LinkedListNode(nodeData)
     const callBackTrue = data => `d1: ${data.d1}, d2: ${data.d2}`
-    const result = node.toString(callBackTrue)
+    const callBackResult = node.toString(callBackTrue)
 
-    expect(result).toBe('d1: 1, d2: 2')
+    expect(callBackResult).toBe('d1: 1, d2: 2')
+  })
+  
+  it('should return unchange node data format with our defined stringifier', () => {
+    const nodeData = { d1: 1, d2: 2 }
+    const node = new LinkedListNode(nodeData)
+    const nonCallBackResult = node.toString()
+
+    expect(nonCallBackResult).toBe("[object Object]")
   })
 })
