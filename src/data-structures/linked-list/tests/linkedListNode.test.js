@@ -8,7 +8,7 @@ describe('Linked List Node', () => {
     expect(n1.data).toBe(9)
     expect(n1.next).toBeNull()
     expect(n2.data).toBe('test')
-    expect(n2.next).toBe(null)
+    expect(n2.next).toBeNull()
   })
 
   it('should link a node to another node', () => {
@@ -18,7 +18,7 @@ describe('Linked List Node', () => {
     expect(n4.data).toBe(4)
     expect(n3.data).toBe('three')
     expect(n3.next).toBe(n4)
-    expect(n4.next).toBe(null)
+    expect(n4.next).toBeNull()
   })
 
   it('should allow a node\'s data to be an object', () => {
