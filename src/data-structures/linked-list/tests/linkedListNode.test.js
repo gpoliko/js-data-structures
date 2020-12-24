@@ -46,5 +46,6 @@ describe('Linked List Node', () => {
     const callBackTrue = data => `d1: ${data.d1}, d2: ${data.d2}`
 
     expect(node.toString(callBackTrue)).toBe('d1: 1, d2: test')
+    expect(node.toString()).toEqual("[object Object]")
   })
 })

@@ -51,8 +51,6 @@ describe('Linked List Tests', () => {
     newList.add('two also')
     newList.add(3)
     expect(newList.get(1).toString()).toBe('2')
-    expect(newList.get(0).data).toBe(1)
-    expect(newList.get(2).data).toBe('two also')
     expect(newList.toString()).toBe('1,2,two also,3')
     expect(newList.tail.next).toBeNull()
     expect(newList.get(3).data).toBe(3)
