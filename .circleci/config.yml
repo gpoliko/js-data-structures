@@ -29,6 +29,9 @@ jobs:
       - run:
           name: tests
           command: npm run test
+      - codecov/upload:
+          file: './coverage/clover.xml'
+          token: ${{ secrets.CODECOV_TOKEN }}
 orbs:
   node: circleci/node@4.1.0
 version: 2.1
