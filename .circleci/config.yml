@@ -8,7 +8,6 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      -run: node --version
   run-tests:
     working_directory: ~/circleci-js-data-structures
     docker:
@@ -39,4 +38,4 @@ workflows:
       - build-container
       - run-tests:
           requires:
-            - build
+            - build-container
