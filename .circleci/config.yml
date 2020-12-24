@@ -20,18 +20,17 @@ jobs:
       - image: "circleci/node:14.15.2"
     steps:
       - checkout
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: Install dependencies
-          command: npm install
-      - run:
-          name: linting
+          name: run linting
           command: npm run lint
       - run:
-          name: tests
-          command: npm run test
+          name: run tests and coverage
+          command: npm run coverage
       - codecov/upload:
           file: './coverage/clover.xml'
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${CODECOV_TOKEN}
 orbs:
   node: circleci/node@4.1.0
   codecov: codecov/codecov@1.1.3
