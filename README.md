@@ -1,5 +1,12 @@
 # JavaScript Data Structures, Algorithms and Design Patterns
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/gpoliko/js-data-structures)
+<p>
+  <a href="https://app.circleci.com/pipelines/github/gpoliko/js-data-structures">
+    <img src="https://circleci.com/gh/gpoliko/js-data-structures.svg?style=shield" alt="Current CircleCI build status." />
+  </a>
+  <a href="https://codecov.io/gh/gpoliko/js-data-structures">
+    <img src="https://codecov.io/gh/gpoliko/js-data-structures/branch/main/graph/badge.svg?token=BL1VWS05XI" alt="Current CircleCI build status." />
+  </a>
+</p>
 
 My aim is to implement popular data structures, algorithms and design patterns using the JavaScript programming language. I am on a never-ending learning journey and essentially "sharping the saw". I will also endeavor to provide documentation for each data structure, algorithm and design pattern, implement tests and practice using JSDoc.
 
