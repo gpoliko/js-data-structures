@@ -15,7 +15,6 @@ class LinkedListNode {
     } else {
       return `${this.data}`
     }
-    // return callback ? callback(this.data) : `${this.data}`
   }
 }
 
