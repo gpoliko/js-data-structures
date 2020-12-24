@@ -40,19 +40,12 @@ describe('Linked List Node', () => {
     expect(n1.toString()).toBe('test')
   })
 
-  it('should convert a node to string with our defined stringifier', done => {
-    const nodeData = { d1: 1, d2: 'test' }
+  it('should convert a node to string with our defined stringifier', () => {
+    const nodeData = { d1: 1, d2: 2 }
     const node = new LinkedListNode(nodeData)
+    const callBackTrue = data => `d1: ${data.d1}, d2: ${data.d2}`
+    const result = node.toString(callBackTrue)
 
-    function callback (data) {
-      try {
-        expect(data).toEqual({ d1: 1, d2: 'test' })
-        done()
-      } catch (err) {
-        done(err)
-      }
-    }
-
-    node.toString(callback)
+    expect(result).toBe('d1: 1, d2: 2')
   })
 })

@@ -10,7 +10,12 @@ class LinkedListNode {
      * @return string representation of the node
      */
   toString (callback) {
-    return callback ? callback(this.data) : `${this.data}`
+    if (callback) {
+      return callback(this.data)
+    } else {
+      return `${this.data}`
+    }
+    // return callback ? callback(this.data) : `${this.data}`
   }
 }
 
