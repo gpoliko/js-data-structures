@@ -5,24 +5,21 @@ jobs:
       - image: "circleci/node:14.15.2"
     steps:
       - checkout
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install dependencies
           command: npm install
+      - save_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
   run-tests:
     working_directory: ~/circleci-js-data-structures
     docker:
       - image: "circleci/node:14.15.2"
     steps:
       - checkout
-      - run:
-          name: Install dependencies
-          command: npm install
-      - restore_cache:
-          key: v1-dependency-cache-{{ checksum "package.json" }}
-      - save_cache:
-          key: v1-dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
       - run:
           name: linting
           command: npm run lint
