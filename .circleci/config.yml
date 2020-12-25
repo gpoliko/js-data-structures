@@ -29,8 +29,8 @@ jobs:
           name: run tests and coverage
           command: npm run coverage
       - codecov/upload:
-          file: '~/circleci-js-data-structures/js-data-structures/coverage/clover.xml'
-          token: ${CODECOV_TOKEN}
+          file: './coverage/clover.xml'
+          token: `${CODECOV_TOKEN}`
 orbs:
   node: circleci/node@4.1.0
   codecov: codecov/codecov@1.1.3
