@@ -39,6 +39,10 @@ workflows:
   test-and-build:
     jobs:
       - build-container
+        filters:
+          branches:
+            ignore:
+              - main
       - run-tests:
           requires:
             - build-container
