@@ -40,9 +40,9 @@ workflows:
     jobs:
       - build-container
       - run-tests:
-        requires:
-          - build-container
-        filters:
-          branches:
-            only:
-              - !main
+          requires:
+            - build-container
+          filters:
+            branches:
+              ignore:
+                - main
