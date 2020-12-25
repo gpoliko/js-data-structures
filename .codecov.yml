@@ -12,6 +12,8 @@ status:
   changes: no
 
 parsers:
+  javascript:
+    enable_partials: yes
   gcov:
     branch_detection:
       conditional: no
