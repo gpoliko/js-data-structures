@@ -11,13 +11,13 @@ class LinkedList {
   // Override default toString() method
   toString (callback) {
     // console.log("THIS =", this)
-    return this.toArray(node => node.toString(callback)).toString()
+    return this.toArray((node) => node.toString(callback)).toString()
   }
 
   /**
-     * toArray - creates an array of nodes
-     * @return array of nodes
-     */
+   * toArray - creates an array of nodes
+   * @return array of nodes
+   */
   toArray () {
     const nodes = []
     let currentNode = this.head
@@ -30,10 +30,10 @@ class LinkedList {
   }
 
   /**
-     * add - Adds nodes to the end of the linked list
-     * @param {Object} data
-     * @return entire LinkedList
-     */
+   * add - Adds nodes to the end of the linked list
+   * @param {Object} data
+   * @return entire LinkedList
+   */
   add (data) {
     // Create a new node
     const newNode = new LinkedListNode(data)
@@ -70,9 +70,9 @@ class LinkedList {
   }
 
   /**
-    * size - returns the number of nodes in the linked list
-    * @return number of nodes in the linked list
-    */
+   * size - returns the number of nodes in the linked list
+   * @return number of nodes in the linked list
+   */
   size () {
     let count = 0
     let node = this.head
@@ -108,9 +108,9 @@ class LinkedList {
   }
 
   /**
-    * getFirst - returns the first node in the linked list
-    * @return first node in the linked list
-    */
+   * getFirst - returns the first node in the linked list
+   * @return first node in the linked list
+   */
   getFirst () {
     return this.head
   }

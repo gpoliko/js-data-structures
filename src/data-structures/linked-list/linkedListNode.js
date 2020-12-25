@@ -5,10 +5,10 @@ class LinkedListNode {
   }
 
   /**
-     * toString - convert a node object to string
-     * @param {function} callback
-     * @return string representation of the node
-     */
+   * toString - convert a node object to string
+   * @param {function} callback
+   * @return string representation of the node
+   */
   toString (callback) {
     if (callback) {
       return callback(this.data)
