@@ -46,6 +46,7 @@ describe('Linked List Node', () => {
     const callBackTrue = data => `d1: ${data.d1}, d2: ${data.d2}`
     const callBackResult = node.toString(callBackTrue)
 
+    expect(typeof callBackResult).toBe('string')
     expect(callBackResult).toBe('d1: 1, d2: 2')
   })
 
@@ -62,8 +63,30 @@ describe('Linked List Node', () => {
     const test2 = strNode.toString()
     const test3 = intNode.toString()
 
+    expect(typeof test1).toBe('string')
+    expect(typeof test2).toBe('string')
+    expect(typeof test3).toBe('string')
     expect(test1).toBe('[object Object]')
     expect(test2).toBe('5')
     expect(test3).toBe('5')
   })
+
+  it('testing callback', done => {
+    const data = 5
+    const node = new LinkedListNode(data)
+
+    printString(node.data, data => {
+      expect(data).toBe(5)
+      expect(data.toString()).toBe('5')
+      done()
+    })
+  })
+
+  function printString (node, callback) {
+    if (callback) {
+      return callback(node)
+    } else {
+      return `${node}`
+    }
+  }
 })
