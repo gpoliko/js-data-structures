@@ -21,7 +21,7 @@ describe('Linked List Node', () => {
     expect(n4.next).toBeNull()
   })
 
-  it('should allow a node\'s data to be an object', () => {
+  it("should allow a node's data to be an object", () => {
     const n2Data = { d1: 'test1', d2: 'test2' }
     const n2 = new LinkedListNode(n2Data)
 
@@ -43,7 +43,7 @@ describe('Linked List Node', () => {
   it('should convert a node to string with our defined stringifier', () => {
     const nodeData = { d1: 1, d2: 2 }
     const node = new LinkedListNode(nodeData)
-    const callBackTrue = data => `d1: ${data.d1}, d2: ${data.d2}`
+    const callBackTrue = (data) => `d1: ${data.d1}, d2: ${data.d2}`
     const callBackResult = node.toString(callBackTrue)
 
     expect(typeof callBackResult).toBe('string')
@@ -70,23 +70,4 @@ describe('Linked List Node', () => {
     expect(test2).toBe('5')
     expect(test3).toBe('5')
   })
-
-  it('testing callback', done => {
-    const data = 5
-    const node = new LinkedListNode(data)
-
-    printString(node.data, data => {
-      expect(data).toBe(5)
-      expect(data.toString()).toBe('5')
-      done()
-    })
-  })
-
-  function printString (node, callback) {
-    if (callback) {
-      return callback(node)
-    } else {
-      return `${node}`
-    }
-  }
 })
