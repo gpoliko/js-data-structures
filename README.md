@@ -1,4 +1,7 @@
 # JavaScript Data Structures, Algorithms and Design Patterns
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7701931ec30b453ea7baa3fc0acb1d38)](https://app.codacy.com/gh/gpoliko/js-data-structures?utm_source=github.com&utm_medium=referral&utm_content=gpoliko/js-data-structures&utm_campaign=Badge_Grade)
+
 <p>
   <a href="https://app.circleci.com/pipelines/github/gpoliko/js-data-structures">
     <img src="https://circleci.com/gh/gpoliko/js-data-structures.svg?style=shield" alt="Current CircleCI build status." />
