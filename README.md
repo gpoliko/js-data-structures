@@ -6,6 +6,9 @@
   <a href="https://codecov.io/gh/gpoliko/js-data-structures">
     <img src="https://codecov.io/gh/gpoliko/js-data-structures/branch/main/graph/badge.svg?token=BL1VWS05XI" alt="Current CircleCI build status." />
   </a>
+  <a href="https://app.codacy.com/gh/gpoliko/js-data-structures?utm_source=github.com&utm_medium=referral&utm_content=gpoliko/js-data-structures&utm_campaign=Badge_Grade">
+    <img src="https://api.codacy.com/project/badge/Grade/7701931ec30b453ea7baa3fc0acb1d38" alt="Current CircleCI build status." />
+  </a>
 </p>
 
 My aim is to implement popular data structures, algorithms and design patterns using the JavaScript programming language. I am on a never-ending learning journey and essentially "sharping the saw". I will also endeavor to provide documentation for each data structure, algorithm and design pattern, implement tests and practice using JSDoc.
