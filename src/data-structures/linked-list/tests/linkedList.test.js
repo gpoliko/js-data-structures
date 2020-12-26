@@ -74,8 +74,6 @@ describe('Linked List Tests', () => {
     expect(newList.delete(3)).toBe(null)
 
     newList.add(1)
-    newList.add(1)
-    newList.add(1)
     newList.add(2)
     newList.add(3)
     newList.add(3)
@@ -87,9 +85,9 @@ describe('Linked List Tests', () => {
     expect(newList.head.toString()).toBe('1')
     expect(newList.tail.toString()).toBe('5')
 
-    const nodeToDelete = newList.delete(1)
-    expect(nodeToDelete.data).toBe(1)
-    expect(newList.toString()).toBe('2,3,3,3,4,5')
+    const nodeToDelete = newList.delete(3)
+    expect(nodeToDelete.data).toBe(3)
+    expect(newList.toString()).toBe('1,2,4,5')
     console.log('post-delete 1:', newList.toString())
 
     // newList.delete(3)
