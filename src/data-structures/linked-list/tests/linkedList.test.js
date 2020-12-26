@@ -88,7 +88,7 @@ describe('Linked List Tests', () => {
     const nodeToDelete = newList.delete(3)
     expect(nodeToDelete.data).toBe(3)
     expect(newList.toString()).toBe('1,2,4,5')
-    console.log('post-delete 1:', newList.toString())
+    console.log('post-delete 3:', newList.toString())
 
     // newList.delete(3)
     // expect(newList.toString()).toBe('1,1,2,4,5')
