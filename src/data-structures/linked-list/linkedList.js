@@ -114,6 +114,38 @@ class LinkedList {
   getFirst () {
     return this.head
   }
+
+  delete (objectData) {
+    if (!this.head) {
+      return null
+    }
+
+    let deleteNode = null
+
+    while (this.head && this.head.value === objectData) {
+      deleteNode = this.head
+      this.head = this.head.next
+    }
+
+    let currentNode = this.head
+
+    if (currentNode !== null) {
+      while (currentNode.next) {
+        if (currentNode.next.data === objectData) {
+          deleteNode = currentNode.next
+          currentNode.next = currentNode.next.next
+        } else {
+          currentNode = currentNode.next
+        }
+      }
+    }
+
+    if (this.tail.data === objectData) {
+      this.tail = currentNode
+    }
+
+    return deleteNode
+  }
 }
 
 export default LinkedList

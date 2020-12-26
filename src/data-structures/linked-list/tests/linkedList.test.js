@@ -67,4 +67,58 @@ describe('Linked List Tests', () => {
     expect(newList.getFirst().data).toBe(1)
     expect(newList.getFirst().data).toEqual(1)
   })
+
+  it('should delete a node given an object', () => {
+    const newList = new LinkedList()
+
+    expect(newList.delete(3)).toBe(null)
+
+    newList.add(1)
+    newList.add(1)
+    newList.add(1)
+    newList.add(2)
+    newList.add(3)
+    newList.add(3)
+    newList.add(3)
+    newList.add(4)
+    newList.add(5)
+
+    console.log(newList.toString())
+    expect(newList.head.toString()).toBe('1')
+    expect(newList.tail.toString()).toBe('5')
+
+    const nodeToDelete = newList.delete(1)
+    expect(nodeToDelete.data).toBe(1)
+    expect(newList.toString()).toBe('2,3,3,3,4,5')
+    console.log('post-delete 1:', newList.toString())
+
+    // newList.delete(3)
+    // expect(newList.toString()).toBe('1,1,2,4,5')
+
+    newList.delete(3)
+    expect(newList.toString()).toBe('2,4,5')
+
+    expect(newList.head.toString()).toBe('2')
+    expect(newList.tail.toString()).toBe('5')
+
+    // newList.delete(5)
+    // expect(newList.toString()).toBe('1,2,4')
+
+    // expect(newList.head.toString()).toBe('1')
+    // expect(newList.tail.toString()).toBe('4')
+
+    // newList.delete(1)
+    // expect(newList.toString()).toBe('2,4')
+
+    // expect(newList.head.toString()).toBe('2')
+    // expect(newList.tail.toStinr()).toBe('4')
+
+    // newList.delete(4)
+    // expect(newList.toString()).toBe('2')
+
+    // expect(newList.head.toString()).toBe('2')
+    // expect(newList.tail.toString()).toBe('2')
+
+
+  })
 })
