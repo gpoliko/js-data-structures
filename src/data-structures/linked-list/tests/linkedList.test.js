@@ -81,42 +81,38 @@ describe('Linked List Tests', () => {
     newList.add(4)
     newList.add(5)
 
-    console.log(newList.toString())
     expect(newList.head.toString()).toBe('1')
     expect(newList.tail.toString()).toBe('5')
 
     const nodeToDelete = newList.delete(3)
     expect(nodeToDelete.data).toBe(3)
     expect(newList.toString()).toBe('1,2,4,5')
-    console.log('post-delete 3:', newList.toString())
-
-    // newList.delete(3)
-    // expect(newList.toString()).toBe('1,1,2,4,5')
 
     newList.delete(3)
+    expect(newList.toString()).toBe('1,2,4,5')
+
+    newList.delete(1)
     expect(newList.toString()).toBe('2,4,5')
 
     expect(newList.head.toString()).toBe('2')
     expect(newList.tail.toString()).toBe('5')
 
-    // newList.delete(5)
-    // expect(newList.toString()).toBe('1,2,4')
+    newList.delete(5)
+    expect(newList.toString()).toBe('2,4')
 
-    // expect(newList.head.toString()).toBe('1')
-    // expect(newList.tail.toString()).toBe('4')
+    expect(newList.head.toString()).toBe('2')
+    expect(newList.tail.toString()).toBe('4')
 
-    // newList.delete(1)
-    // expect(newList.toString()).toBe('2,4')
+    newList.delete(1)
+    expect(newList.toString()).toBe('2,4')
 
-    // expect(newList.head.toString()).toBe('2')
-    // expect(newList.tail.toStinr()).toBe('4')
+    expect(newList.head.toString()).toBe('2')
+    expect(newList.tail.toString()).toBe('4')
 
-    // newList.delete(4)
-    // expect(newList.toString()).toBe('2')
+    newList.delete(4)
+    expect(newList.toString()).toBe('2')
 
-    // expect(newList.head.toString()).toBe('2')
-    // expect(newList.tail.toString()).toBe('2')
-
-
+    expect(newList.head.toString()).toBe('2')
+    expect(newList.tail.toString()).toBe('2')
   })
 })

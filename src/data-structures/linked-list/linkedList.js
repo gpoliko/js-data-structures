@@ -115,15 +115,15 @@ class LinkedList {
     return this.head
   }
 
-  delete (objectData) {
+  delete (data) {
     if (!this.head) {
       return null
     }
 
-    let deleteNode = null
+    let deletedNode = null
 
-    while (this.head && this.head.value === objectData) {
-      deleteNode = this.head
+    while (this.head && (this.head.data === data)) {
+      deletedNode = this.head
       this.head = this.head.next
     }
 
@@ -131,8 +131,8 @@ class LinkedList {
 
     if (currentNode !== null) {
       while (currentNode.next) {
-        if (currentNode.next.data === objectData) {
-          deleteNode = currentNode.next
+        if (currentNode.next.data === data) {
+          deletedNode = currentNode.next
           currentNode.next = currentNode.next.next
         } else {
           currentNode = currentNode.next
@@ -140,11 +140,11 @@ class LinkedList {
       }
     }
 
-    if (this.tail.data === objectData) {
+    if (this.tail.data === data) {
       this.tail = currentNode
     }
 
-    return deleteNode
+    return deletedNode
   }
 }
 
