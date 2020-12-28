@@ -42,7 +42,4 @@ workflows:
       - run-tests:
           requires:
             - build-container
-          filters:
-            branches:
-              ignore:
-                - main
+            
