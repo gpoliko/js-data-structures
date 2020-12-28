@@ -71,7 +71,7 @@ describe('Linked List Tests', () => {
   it('should delete a node given an object', () => {
     const newList = new LinkedList()
 
-    expect(newList.delete(3)).toBe(null)
+    expect(newList.delete(3)).toBeNull()
 
     newList.add(1)
     newList.add(2)
