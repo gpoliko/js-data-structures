@@ -115,20 +115,26 @@ class LinkedList {
     return this.head
   }
 
+  /**
+   * delete - Removes a node given the data as a parameter
+   * @param {Object} data 
+   * @return node to delete from the linked list
+   */
   delete (data) {
     if (!this.head) {
       return null
     }
 
+    // Assigning the node to delete
+    // Setting the new head node
     let deletedNode = null
-
     while (this.head && (this.head.data === data)) {
       deletedNode = this.head
       this.head = this.head.next
     }
 
+    // Iterate through the linkedList nodes to find the node to delete
     let currentNode = this.head
-
     if (currentNode !== null) {
       while (currentNode.next) {
         if (currentNode.next.data === data) {
@@ -140,10 +146,10 @@ class LinkedList {
       }
     }
 
+    // Setting the tail node of the linked list
     if (this.tail.data === data) {
       this.tail = currentNode
     }
-
     return deletedNode
   }
 }
