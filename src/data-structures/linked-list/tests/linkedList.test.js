@@ -1,4 +1,5 @@
 import LinkedList from '../linkedList'
+import LinkedListNode from '../linkedListNode'
 
 describe('Linked List Tests', () => {
   it('should create a new linked list', () => {
@@ -29,6 +30,30 @@ describe('Linked List Tests', () => {
     newList.add('test2')
     newList.addFirst('test3')
     expect(newList.toString()).toBe('test3,test1,test2')
+  })
+
+  it('should validate if statement in add() to be true or false', () => {
+    const newList = new LinkedList()
+    const n1 = new LinkedListNode(3)
+
+    expect(newList.head).toBeFalsy()
+
+    newList.add(n1)
+    expect(newList.head).toBeTruthy()
+  })
+
+  it('should validate if statements in addFirst() to be true or false', () => {
+    const newList = new LinkedList()
+    const n1 = new LinkedListNode(3)
+
+    expect(newList.head).toBeFalsy()
+    expect(newList.tail).toBeFalsy()
+
+    newList.add(n1)
+    expect(newList.head).toBeTruthy()
+    expect(newList.head.toString()).toBe('3')
+    expect(newList.tail).toBeTruthy()
+    expect(newList.tail.next).toBeNull()
   })
 
   it('should return the size of the linked list', () => {
