@@ -117,7 +117,7 @@ class LinkedList {
 
   /**
    * delete - Removes a node given the data as a parameter
-   * @param {Object} data 
+   * @param {Object} data
    * @return node to delete from the linked list
    */
   delete (data) {
