@@ -12,5 +12,5 @@ In computer science, a linked list is a linear collection of data elements whose
 O(n)
 
 ## References
-  - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
-  - [Oracle Java Docs](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
+- [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
+- [Oracle Java Docs](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
