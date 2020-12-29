@@ -77,42 +77,37 @@ describe('Linked List Tests', () => {
     newList.add(2)
     newList.add(3)
     newList.add(3)
-    newList.add(3)
-    newList.add(4)
-    newList.add(5)
+    newList.add('four')
 
     expect(newList.head.toString()).toBe('1')
-    expect(newList.tail.toString()).toBe('5')
+    expect(newList.tail.toString()).toBe('four')
 
     const nodeToDelete = newList.delete(3)
     expect(nodeToDelete.data).toBe(3)
-    expect(newList.toString()).toBe('1,2,4,5')
+    expect(newList.toString()).toBe('1,2,four')
 
     newList.delete(3)
-    expect(newList.toString()).toBe('1,2,4,5')
+    expect(newList.toString()).toBe('1,2,four')
 
     newList.delete(1)
-    expect(newList.toString()).toBe('2,4,5')
+    expect(newList.toString()).toBe('2,four')
 
     expect(newList.head.toString()).toBe('2')
-    expect(newList.tail.toString()).toBe('5')
+    expect(newList.tail.toString()).toBe('four')
 
-    newList.delete(5)
-    expect(newList.toString()).toBe('2,4')
-
-    expect(newList.head.toString()).toBe('2')
-    expect(newList.tail.toString()).toBe('4')
-
-    newList.delete(1)
-    expect(newList.toString()).toBe('2,4')
-
-    expect(newList.head.toString()).toBe('2')
-    expect(newList.tail.toString()).toBe('4')
-
-    newList.delete(4)
+    newList.delete('four')
     expect(newList.toString()).toBe('2')
 
     expect(newList.head.toString()).toBe('2')
     expect(newList.tail.toString()).toBe('2')
+
+    newList.delete(1)
+    expect(newList.toString()).toBe('2')
+
+    newList.delete(2)
+    expect(newList.toString()).toBe('')
+
+    expect(newList.head).toBeNull()
+    expect(newList.tail).toBeNull()
   })
 })
