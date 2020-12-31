@@ -1,4 +1,4 @@
-import LinkedListNode from './linkedListNode'
+import Node from './node'
 
 // Class respresenting a LinkedList
 class LinkedList {
@@ -36,7 +36,7 @@ class LinkedList {
    */
   add (data) {
     // Create a new node
-    const newNode = new LinkedListNode(data)
+    const newNode = new Node(data)
 
     // If no head exists, newNode will become the head
     if (!this.head) {
@@ -58,7 +58,7 @@ class LinkedList {
    */
   addFirst (data) {
     // Create a new node to become a head
-    const newNode = new LinkedListNode(data, this.head)
+    const newNode = new Node(data, this.head)
     this.head = newNode
 
     // If no tail exists, newNode will become the tail
