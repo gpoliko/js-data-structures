@@ -1,9 +1,9 @@
-import LinkedListNode from '../linkedListNode'
+import Node from '../node'
 
 describe('Linked List Node', () => {
   it('should create a node containing data', () => {
-    const n1 = new LinkedListNode(9)
-    const n2 = new LinkedListNode('test')
+    const n1 = new Node(9)
+    const n2 = new Node('test')
 
     expect(n1.data).toBe(9)
     expect(n1.next).toBeNull()
@@ -12,8 +12,8 @@ describe('Linked List Node', () => {
   })
 
   it('should link a node to another node', () => {
-    const n4 = new LinkedListNode(4)
-    const n3 = new LinkedListNode('three', n4)
+    const n4 = new Node(4)
+    const n3 = new Node('three', n4)
 
     expect(n4.data).toBe(4)
     expect(n3.data).toBe('three')
@@ -23,7 +23,7 @@ describe('Linked List Node', () => {
 
   it("should allow a node's data to be an object", () => {
     const n2Data = { d1: 'test1', d2: 'test2' }
-    const n2 = new LinkedListNode(n2Data)
+    const n2 = new Node(n2Data)
 
     expect(n2.data.d1).toBe('test1')
     expect(n2.data.d2).toBe('test2')
@@ -31,7 +31,7 @@ describe('Linked List Node', () => {
 
   // Used example
   it('should convert a node to a string', () => {
-    const n1 = new LinkedListNode(5)
+    const n1 = new Node(5)
 
     expect(n1.toString()).toBe('5')
 
@@ -42,7 +42,7 @@ describe('Linked List Node', () => {
 
   it('should convert a node to string with our defined stringifier', () => {
     const nodeData = { d1: 1, d2: 2 }
-    const node = new LinkedListNode(nodeData)
+    const node = new Node(nodeData)
     const callBackTrue = (data) => `d1: ${data.d1}, d2: ${data.d2}`
     const callBackResult = node.toString(callBackTrue)
 
@@ -55,9 +55,9 @@ describe('Linked List Node', () => {
     const strData = '5'
     const intData = 5
 
-    const objNode = new LinkedListNode(objData)
-    const strNode = new LinkedListNode(strData)
-    const intNode = new LinkedListNode(intData)
+    const objNode = new Node(objData)
+    const strNode = new Node(strData)
+    const intNode = new Node(intData)
 
     const test1 = objNode.toString()
     const test2 = strNode.toString()

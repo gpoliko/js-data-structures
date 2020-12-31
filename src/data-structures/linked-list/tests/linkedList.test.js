@@ -1,5 +1,5 @@
 import LinkedList from '../linkedList'
-import LinkedListNode from '../linkedListNode'
+import Node from '../node'
 
 describe('Linked List Tests', () => {
   it('should create a new linked list', () => {
@@ -34,7 +34,7 @@ describe('Linked List Tests', () => {
 
   it('should validate if statement in add() to be true or false', () => {
     const newList = new LinkedList()
-    const n1 = new LinkedListNode(3)
+    const n1 = new Node(3)
 
     expect(newList.head).toBeFalsy()
 
@@ -44,7 +44,7 @@ describe('Linked List Tests', () => {
 
   it('should validate if statements in addFirst() to be true or false', () => {
     const newList = new LinkedList()
-    const n1 = new LinkedListNode(3)
+    const n1 = new Node(3)
 
     expect(newList.head).toBeFalsy()
     expect(newList.tail).toBeFalsy()
