@@ -19,4 +19,14 @@ describe('Doubly Linked List Node', () => {
     expect(n1.data).toBe(1)
     expect(n1.next).toBe(n2)
   })
+
+  it('should convert a node into a string', () => {
+    const n1 = new Node(5)
+
+    expect(n1.toString()).toBe('5')
+
+    n1.data = 'testing-123'
+
+    expect(n1.toString()).toBe('testing-123')
+  })
 })
