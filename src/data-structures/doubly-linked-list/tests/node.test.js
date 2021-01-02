@@ -10,4 +10,13 @@ describe('Doubly Linked List Node', () => {
     expect(n2.data).toBe('test')
     expect(n2.next).toBeNull()
   })
+
+  it('should doubly link a node to another node', () => {
+    const n2 = new Node(2)
+    const n1 = new Node(1, n2, null)
+
+    expect(n2.data).toBe(2)
+    expect(n1.data).toBe(1)
+    expect(n1.next).toBe(n2)
+  })
 })
