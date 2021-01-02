@@ -14,6 +14,7 @@ describe('Doubly Linked List Tests', () => {
     newList.add(1)
     newList.add(2)
 
+    expect(newList.toString()).toBe('1,2')
     expect(newList.head.toString()).toBe('1')
     expect(newList.head.next.data).toBe(2)
     expect(newList.tail.previous.data).toBe(1)
