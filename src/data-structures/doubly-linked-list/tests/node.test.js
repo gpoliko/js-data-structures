@@ -31,7 +31,7 @@ describe('Doubly Linked List Node', () => {
   })
 
   it('should convert a node to string with our defined stringifier', () => {
-    const nodeData = { d1: 1, d2: 2}
+    const nodeData = { d1: 1, d2: 2 }
     const node = new Node(nodeData)
     const callBackTrue = data => `d1: ${data.d1}, d2: ${data.d2}`
     const callBackResult = node.toString(callBackTrue)
