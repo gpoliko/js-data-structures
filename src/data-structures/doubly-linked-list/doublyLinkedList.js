@@ -26,7 +26,7 @@ class DoublyLinkedList {
     return nodes
   }
 
-    /**
+  /**
    * add - Adds nodes to the end of the linked list
    * @param {Object} data
    * @return entire LinkedList
