@@ -49,6 +49,30 @@ class DoublyLinkedList {
 
     return this
   }
+
+  /**
+   * addFirst - Adds a node to the beginning of the doubly linked list
+   * @param {Object} data
+   * @return doubly linked list after adding new item to the beginning of the list
+   */
+  addFirst (data) {
+    // Create a new node
+    const newNode = new Node(data, this.head)
+
+    // If head exists, head will be linked to newNode as "previous"
+    if (this.head) {
+      this.head.previous = newNode
+    }
+    // newNode made the head of the list
+    this.head = newNode
+
+    // Making newNode the tail of the list if no nodes exist
+    if (!this.tail) {
+      this.tail = newNode
+    }
+
+    return this
+  }
 }
 
 export default DoublyLinkedList
