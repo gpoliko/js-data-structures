@@ -52,7 +52,7 @@ class DoublyLinkedList {
 
   /**
    * addFirst - Adds a node to the beginning of the doubly linked list
-   * @param {Object} data 
+   * @param {Object} data
    * @return doubly linked list after adding new item to the beginning of the list
    */
   addFirst (data) {
@@ -65,7 +65,7 @@ class DoublyLinkedList {
     }
     // newNode made the head of the list
     this.head = newNode
-    
+
     // Making newNode the tail of the list if no nodes exist
     if (!this.tail) {
       this.tail = newNode
