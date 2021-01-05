@@ -13,4 +13,4 @@ O(n)
 
 ## References
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
-- [Oracle Java Docs](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
+- [Youtube](https://youtu.be/RBSGKlAvoiM?t=2102)
