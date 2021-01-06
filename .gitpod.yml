@@ -1,4 +1,0 @@
-image: node:alpine
-  file: .gitpod.Dockerfile
-tasks:
-  - init: npm install
