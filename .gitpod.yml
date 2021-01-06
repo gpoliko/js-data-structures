@@ -1,0 +1,4 @@
+image: node:alphine
+  file: .gitpod.Dockerfile
+tasks:
+  - init: npm install
