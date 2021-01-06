@@ -14,5 +14,5 @@ The two node links allow traversal of the list in either direction. While adding
 O(n)
 
 ## References
--  [Wikipedia](https://en.wikipedia.org/wiki/Doubly_linked_list)
--  [Youtube](https://youtu.be/RBSGKlAvoiM?t=2955)
+-   [Wikipedia](https://en.wikipedia.org/wiki/Doubly_linked_list)
+-   [Youtube](https://youtu.be/RBSGKlAvoiM?t=2955)

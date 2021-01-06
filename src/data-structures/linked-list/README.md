@@ -12,5 +12,5 @@ In computer science, a linked list is a linear collection of data elements whose
 O(n)
 
 ## References
-- [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
-- [Youtube](https://youtu.be/RBSGKlAvoiM?t=2102)
+-   [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
+-   [Youtube](https://youtu.be/RBSGKlAvoiM?t=2102)
