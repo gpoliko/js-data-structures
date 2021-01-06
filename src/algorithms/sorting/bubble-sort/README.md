@@ -7,6 +7,5 @@ Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorith
 | :----: | :----: | :----: | :----: |
 | O(n<sup>2</sup>)   | O(n<sup>2</sup>)   | O(n)   | O(1)   |
 
-
 ## References
 - [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
