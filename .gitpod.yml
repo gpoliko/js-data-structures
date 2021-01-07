@@ -3,7 +3,3 @@ image:
 
 tasks:
   - init: npm install
-
-ports:
-  - port: 1313
-    onOpen: open-preview
