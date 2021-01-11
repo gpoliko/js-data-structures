@@ -21,6 +21,14 @@ describe('Linked List Node', () => {
     expect(n4.next).toBeNull()
   })
 
+  it("should allow a node's data to be an object", () => {
+    const n2Data = { d1: 'test1', d2: 'test2' }
+    const n2 = new Node(n2Data)
+
+    expect(n2.data.d1).toBe('test1')
+    expect(n2.data.d2).toBe('test2')
+  })
+
   it('should convert a node to a string', () => {
     const n1 = new Node(5)
 
