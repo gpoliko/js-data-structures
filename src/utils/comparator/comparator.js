@@ -16,7 +16,7 @@ class Comparator {
   }
 
   equal (value1, value2) {
-      
+      return this.compare(value1, value2) === 0
   }
 }
 
