@@ -36,8 +36,8 @@ describe('Comparator Tests', () => {
   it('should use the class\'s compare function for lessThan or equality comparison', () => {
     const compare = new Comparator()
 
-    expect(compare.lessThanOrEqualTo(1, 1)).toBe(true)
-    expect(compare.lessThanOrEqualTo(1, 2)).toBe(true)
-    expect(compare.lessThanOrEqualTo(2, 1)).toBe(false)
+    expect(compare.lessThanOrEqual(1, 1)).toBe(true)
+    expect(compare.lessThanOrEqual(1, 2)).toBe(true)
+    expect(compare.lessThanOrEqual(2, 1)).toBe(false)
   })
 })
