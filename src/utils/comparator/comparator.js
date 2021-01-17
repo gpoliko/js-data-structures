@@ -30,6 +30,10 @@ class Comparator {
   lessThanOrEqual (value1, value2) {
     return this.lessThan(value1, value2) || this.equal(value1, value2)
   }
+
+  greaterThanOrEqual (value1, value2) {
+    return this.greaterThan(value1, value2) || this.equal(value1, value2)
+  }
 }
 
 export default Comparator
