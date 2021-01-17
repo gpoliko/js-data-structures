@@ -63,6 +63,7 @@ describe('Custom compare function tests', () => {
     const compare = new Comparator(customCompare)
 
     expect(compare.lessThan('test', 'test')).toBe(false)
+    expect(compare.lessThan('test123', 'test')).toBe(false)
     expect(compare.lessThan('test', 'test123')).toBe(true)
   })
 
