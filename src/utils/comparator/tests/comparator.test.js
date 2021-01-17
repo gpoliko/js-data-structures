@@ -55,16 +55,19 @@ describe('Custom compare function tests', () => {
   it('should use the custom compare functino for equality comparison', () => {
     const compare = new Comparator(customCompare)
 
-    expect(compare.equal('a', 'b')).toBe(true)
+    expect(compare.equal('test', 'test123')).toBe(false)
+    expect(compare.equal('test', 'test')).toBe(true)
   })
 })
 
-const customCompare = (value1, value2) => {
-  if (value1.length === value2.length) {
+
+// Custom function to compare string length
+const customCompare = (string1, string2) => {
+  if (string1.length === string2.length) {
     return 0
   }
 
-  if (value1.length < value2.length) {
+  if (string1.length < string2.length) {
     return -1
   } else {
     return 1
