@@ -1,6 +1,6 @@
 import Comparator from '../comparator'
 
-describe('Comparator Tests', () => {
+describe('Default compare function tests', () => {
   it('should use the class\'s compare function for equality comparison', () => {
     const compare = new Comparator()
 
@@ -50,3 +50,23 @@ describe('Comparator Tests', () => {
     expect(compare.greaterThanOrEqual(1, 0)).toBe(true)
   })
 })
+
+describe('Custom compare function tests', () => {
+  it('should use the custom compare functino for equality comparison', () => {
+    const compare = new Comparator(customCompare)
+
+    expect(compare.equal('a', 'b')).toBe(true)
+  })
+})
+
+const customCompare = (value1, value2) => {
+  if (value1.length === value2.length) {
+    return 0
+  }
+
+  if (value1.length < value2.length) {
+    return -1
+  } else {
+    return 1
+  }
+}
