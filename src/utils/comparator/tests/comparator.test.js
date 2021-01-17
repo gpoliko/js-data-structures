@@ -19,5 +19,6 @@ describe('Comparator Tests', () => {
       expect(compare.lessThan(2, 1)).toBe(false)
       expect(compare.lessThan('test', 'test')).toBe(false)
       expect(compare.lessThan('test', 'test123')).toBe(true)
+      expect(compare.lessThan('test123', 'test')).toBe(false)
   })
 })
