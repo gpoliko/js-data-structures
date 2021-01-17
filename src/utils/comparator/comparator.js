@@ -18,6 +18,10 @@ class Comparator {
   equal (value1, value2) {
     return this.compare(value1, value2) === 0
   }
+
+  lessThan (value1, value2) {
+    return this.compare(value1, value2) < 0
+  }
 }
 
 export default Comparator
