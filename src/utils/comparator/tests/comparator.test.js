@@ -65,6 +65,14 @@ describe('Custom compare function tests', () => {
     expect(compare.lessThan('test', 'test')).toBe(false)
     expect(compare.lessThan('test', 'test123')).toBe(true)
   })
+
+  it('should use the custom compare function for greaterThan comparison', () => {
+    const compare = new Comparator(customCompare)
+
+    expect(compare.greaterThan('test', 'test')).toBe(false)
+    expect(compare.greaterThan('test', 'test123')).toBe(false)
+    expect(compare.greaterThan('test123', 'test')).toBe(true)
+  })
 })
 
 
