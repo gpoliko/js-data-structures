@@ -15,8 +15,9 @@ describe('Comparator Tests', () => {
     const compare = new Comparator()
 
     expect(compare.lessThan(1, 1)).toBe(false)
-    expect(compare.lessThan(1, 2)).toBe(true)
     expect(compare.lessThan(2, 1)).toBe(false)
+    expect(compare.lessThan(1, 2)).toBe(true)
+    expect(compare.lessThan(-5, -3)).toBe(true)
     expect(compare.lessThan('test', 'test')).toBe(false)
     expect(compare.lessThan('test', 'test123')).toBe(true)
     expect(compare.lessThan('test123', 'test')).toBe(false)
