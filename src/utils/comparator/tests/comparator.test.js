@@ -28,5 +28,8 @@ describe('Comparator Tests', () => {
       expect(compare.greaterThan(1, 1)).toBe(false)
       expect(compare.greaterThan(1, 2)).toBe(false)
       expect(compare.greaterThan(2, 1)).toBe(true)
+      expect(compare.greaterThan('test', 'test')).toBe(false)
+      expect(compare.greaterThan('test', 'test123')).toBe(false)
+      expect(compare.greaterThan('test123', 'test')).toBe(true)
   })
 })
