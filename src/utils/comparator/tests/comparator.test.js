@@ -52,11 +52,18 @@ describe('Default compare function tests', () => {
 })
 
 describe('Custom compare function tests', () => {
-  it('should use the custom compare functino for equality comparison', () => {
+  it('should use the custom compare function for equality comparison', () => {
     const compare = new Comparator(customCompare)
 
     expect(compare.equal('test', 'test123')).toBe(false)
     expect(compare.equal('test', 'test')).toBe(true)  
+  })
+
+  it('should use the custom compare function for lessThan comparison', () => {
+    const compare = new Comparator(customCompare)
+
+    expect(compare.lessThan('test', 'test')).toBe(false)
+    expect(compare.lessThan('test', 'test123')).toBe(true)
   })
 })
 
