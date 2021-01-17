@@ -32,4 +32,12 @@ describe('Comparator Tests', () => {
     expect(compare.greaterThan('test', 'test123')).toBe(false)
     expect(compare.greaterThan('test123', 'test')).toBe(true)
   })
+
+  it('should use the class\'s compare function for lessThan or equality comparison', () => {
+    const compare = new Comparator()
+
+    expect(compare.lessThanOrEqualTo(1, 1)).toBe(true)
+    expect(compare.lessThanOrEqualTo(1, 2)).toBe(true)
+    expect(compare.lessThanOrEqualTo(2, 1)).toBe(false)
+  })
 })
