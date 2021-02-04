@@ -1,11 +1,13 @@
 import Node from './node'
+import Compare from '../../utils/comparator/comparator'
 
 // Class respresenting a LinkedList
 class LinkedList {
   // Creates a LinkedList object
-  constructor () {
+  constructor (compareFn) {
     this.head = null
     this.tail = null
+    this.compare = new Compare(CompareFn)
   }
 
   // Override default toString() method
