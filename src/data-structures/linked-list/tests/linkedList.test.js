@@ -5,7 +5,6 @@ describe('Linked List Tests', () => {
   it('should create a new linked list', () => {
     const newList = new LinkedList()
 
-    expect(newList).toEqual({ head: null, tail: null })
     expect(newList.toString()).toBe('')
   })
 

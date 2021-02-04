@@ -1,16 +1,17 @@
 import Node from './node'
+import Comparator from '../../utils/comparator/comparator'
 
 // Class respresenting a LinkedList
 class LinkedList {
   // Creates a LinkedList object
-  constructor () {
+  constructor (compareFn) {
     this.head = null
     this.tail = null
+    this.compare = new Comparator(compareFn)
   }
 
   // Override default toString() method
   toString (callback) {
-    // console.log("THIS =", this)
     return this.toArray((node) => node.toString(callback)).toString()
   }
 
@@ -128,7 +129,7 @@ class LinkedList {
     // Assigning the node to delete
     // Setting the new head node
     let deletedNode = null
-    while (this.head && (this.head.data === data)) {
+    while (this.head && this.compare.equal(this.head.data, data)) {
       deletedNode = this.head
       this.head = this.head.next
     }
@@ -137,7 +138,7 @@ class LinkedList {
     let currentNode = this.head
     if (currentNode !== null) {
       while (currentNode.next) {
-        if (currentNode.next.data === data) {
+        if (this.compare.equal(currentNode.next.data, data)) {
           deletedNode = currentNode.next
           currentNode.next = currentNode.next.next
         } else {
@@ -147,7 +148,7 @@ class LinkedList {
     }
 
     // Setting the tail node of the linked list
-    if (this.tail.data === data) {
+    if (this.compare.equal(this.tail.data, data)) {
       this.tail = currentNode
     }
     return deletedNode
