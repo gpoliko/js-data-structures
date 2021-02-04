@@ -12,7 +12,6 @@ class LinkedList {
 
   // Override default toString() method
   toString (callback) {
-    // console.log("THIS =", this)
     return this.toArray((node) => node.toString(callback)).toString()
   }
 
@@ -130,7 +129,7 @@ class LinkedList {
     // Assigning the node to delete
     // Setting the new head node
     let deletedNode = null
-    while (this.head && (this.head.data === data)) {
+    while (this.head && this.compare.equal(this.head.data, data)) {
       deletedNode = this.head
       this.head = this.head.next
     }
