@@ -138,7 +138,7 @@ class LinkedList {
     let currentNode = this.head
     if (currentNode !== null) {
       while (currentNode.next) {
-        if (currentNode.next.data === data) {
+        if (this.compare.equal(currentNode.next.data, data)) {
           deletedNode = currentNode.next
           currentNode.next = currentNode.next.next
         } else {
@@ -148,7 +148,7 @@ class LinkedList {
     }
 
     // Setting the tail node of the linked list
-    if (this.tail.data === data) {
+    if (this.compare.equal(this.tail.data, data)) {
       this.tail = currentNode
     }
     return deletedNode
