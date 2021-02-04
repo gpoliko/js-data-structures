@@ -7,7 +7,7 @@ class LinkedList {
   constructor (compareFn) {
     this.head = null
     this.tail = null
-    this.compare = new Comparator(CompareFn)
+    this.compare = new Comparator(compareFn)
   }
 
   // Override default toString() method
