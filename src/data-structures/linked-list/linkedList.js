@@ -1,5 +1,5 @@
 import Node from './node'
-import Compare from '../../utils/comparator/comparator'
+import Comparator from '../../utils/comparator/comparator'
 
 // Class respresenting a LinkedList
 class LinkedList {
@@ -7,7 +7,7 @@ class LinkedList {
   constructor (compareFn) {
     this.head = null
     this.tail = null
-    this.compare = new Compare(CompareFn)
+    this.compare = new Comparator(CompareFn)
   }
 
   // Override default toString() method
