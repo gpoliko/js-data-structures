@@ -1,3 +1,13 @@
 {
-    "extends": "eda"
+  "root": true,
+  "ignorePatterns": ["*.test.js"],
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "extends": ["eslint:recommended", "airbnb-base", "prettier"],
+      "rules": {
+        "no-plusplus": 0
+      }
+    }
+  ]
 }

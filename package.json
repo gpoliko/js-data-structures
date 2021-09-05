@@ -7,7 +7,8 @@
     "test": "jest --verbose",
     "coverage": "npm run test -- --coverage",
     "ci": "npm run lint && npm run coverage",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "prepare": "husky install"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -30,12 +31,20 @@
     "url": "https://github.com/gpoliko/data-structures-and-algorithms/issues"
   },
   "homepage": "https://github.com/gpoliko/data-structures-and-algorithms#readme",
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "eslint": "^7.16.0",
-    "eslint-config-eda": "^0.1.4",
-    "jest": "^26.6.3"
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "husky": "^7.0.2",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.1.2",
+    "prettier": "2.3.2"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix",
+    "*.{js,ts,json,scss,md}": "prettier --write ."
   }
 }
