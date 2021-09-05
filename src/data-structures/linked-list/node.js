@@ -1,7 +1,7 @@
 class LinkedListNode {
-  constructor (data, next = null) {
-    this.data = data
-    this.next = next
+  constructor(data, next = null) {
+    this.data = data;
+    this.next = next;
   }
 
   /**
@@ -9,14 +9,14 @@ class LinkedListNode {
    * @param {function} callback
    * @return string representation of the node
    */
-  toString (callback) {
+  toString(callback) {
     if (callback) {
-      return callback(this.data)
-    } else {
-      return `${this.data}`
+      return callback(this.data);
     }
+
+    return `${this.data}`;
   }
 }
 
 // Adding a comment to run CircleCI
-export default LinkedListNode
+export default LinkedListNode;

@@ -5,14 +5,18 @@ In computer science, a doubly linked list is a linked data structure that consis
 The two node links allow traversal of the list in either direction. While adding or removing a node in a doubly linked list requires changing more links than the same operations on a singly linked list, the operations are simpler and potentially more efficient (for nodes other than first nodes) because there is no need to keep track of the previous node during traversal or no need to traverse the list to find the previous node, so that its link can be modified.
 
 ## Complexities
+
 ### Time
+
 | SEARCH | ACCESS | INSERT | DELETE |
 | :----: | :----: | :----: | :----: |
-| O(n)   | O(n)   | O(1)   | O(n)   |
+|  O(n)  |  O(n)  |  O(1)  |  O(n)  |
 
 ### Space
+
 O(n)
 
 ## References
+
 - [Wikipedia](https://en.wikipedia.org/wiki/Doubly_linked_list)
 - [Youtube](https://youtu.be/RBSGKlAvoiM?t=2955)

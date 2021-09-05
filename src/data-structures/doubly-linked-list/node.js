@@ -1,8 +1,8 @@
 class Node {
-  constructor (data, next = null, previous = null) {
-    this.data = data
-    this.next = next
-    this.previous = previous
+  constructor(data, next = null, previous = null) {
+    this.data = data;
+    this.next = next;
+    this.previous = previous;
   }
 
   /**
@@ -10,13 +10,13 @@ class Node {
    * @param {function} callback
    * @return string representation of the node
    */
-  toString (callback) {
+  toString(callback) {
     if (callback) {
-      return callback(this.data)
-    } else {
-      return `${this.data}`
+      return callback(this.data);
     }
+
+    return `${this.data}`;
   }
 }
 
-export default Node
+export default Node;

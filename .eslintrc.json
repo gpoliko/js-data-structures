@@ -1,20 +1,13 @@
 {
-    "root": true,
-    "ignorePatterns": [],
-    "overrides": [
-      {
-        "files": ["*.js"],
-        "extends": [
-          "eslint:recommended",
-          "airbnb",
-          "prettier"
-        ],
-        "rules": {}
-      },
-      {
-        "files": [],
-        "extends": [],
-        "rules": {}
+  "root": true,
+  "ignorePatterns": ["*.test.js"],
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "extends": ["eslint:recommended", "airbnb-base", "prettier"],
+      "rules": {
+        "no-plusplus": 1
       }
-    ]
-  }
+    }
+  ]
+}

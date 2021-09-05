@@ -1,5 +1,3 @@
-class BubbleSort {
+class BubbleSort {}
 
-}
-
-export default BubbleSort
+export default BubbleSort;
