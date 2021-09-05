@@ -6,7 +6,7 @@
       "files": ["*.js"],
       "extends": ["eslint:recommended", "airbnb-base", "prettier"],
       "rules": {
-        "no-plusplus": 1
+        "no-plusplus": 0
       }
     }
   ]
